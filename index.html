@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <meta name="theme-color" content="#050609">
-<meta name="description" content="Ayman Abdelsanad — Nursing Student & Developer">
+<meta name="description" content="Ayman Abdelsanad — College of Nursing Student">
 
 <title>AYMAN ABDELSANAD — Personal Space</title>
 
@@ -41,8 +41,6 @@ body{
     font-family:Inter,Arial,sans-serif;
     overflow-x:hidden;
 }
-
-/* BACKGROUND */
 
 body::before{
     content:"";
@@ -146,7 +144,7 @@ body::before{
     to{background-position:250%}
 }
 
-/* TOP BAR */
+/* TOP */
 
 .top{
     position:fixed;
@@ -166,6 +164,7 @@ body::before{
 
     border:1px solid var(--border);
     background:rgba(7,8,12,.72);
+
     backdrop-filter:blur(22px);
     -webkit-backdrop-filter:blur(22px);
 
@@ -194,6 +193,7 @@ body::before{
 
 .hero{
     min-height:100svh;
+
     padding:130px 16px 80px;
 
     display:flex;
@@ -230,8 +230,11 @@ body::before{
 .welcome i{
     width:7px;
     height:7px;
+
     border-radius:50%;
+
     background:var(--green);
+
     box-shadow:0 0 13px var(--green);
 }
 
@@ -239,10 +242,15 @@ body::before{
 
 .hero-name{
     direction:ltr;
+
     font-size:clamp(52px,16vw,155px);
+
     line-height:.79;
+
     letter-spacing:-.075em;
+
     font-weight:900;
+
     user-select:none;
 }
 
@@ -260,6 +268,7 @@ body::before{
 
     -webkit-background-clip:text;
     background-clip:text;
+
     color:transparent;
 }
 
@@ -267,6 +276,7 @@ body::before{
     display:block;
 
     color:transparent;
+
     -webkit-text-stroke:1px rgba(255,255,255,.46);
 
     transition:.4s;
@@ -276,31 +286,54 @@ body::before{
     -webkit-text-stroke-color:rgba(0,234,255,.7);
 }
 
-/* HERO TEXT */
+/* NURSING TITLE */
 
-.hero-description{
-    max-width:650px;
-    margin:30px auto 0;
+.nursing-title{
+    direction:ltr;
 
-    color:#999ca8;
-    font-size:clamp(12px,3.5vw,16px);
-    line-height:1.9;
+    margin-top:28px;
+
+    color:#bfc2cc;
+
+    font-size:clamp(10px,2.8vw,14px);
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
 }
 
-.hero-description strong{
-    color:#fff;
+.nursing-title::before{
+    content:"";
+    display:inline-block;
+
+    width:28px;
+    height:1px;
+
+    background:var(--cyan);
+
+    vertical-align:middle;
+
+    margin-right:10px;
+
+    box-shadow:0 0 10px var(--cyan);
 }
 
 /* SCROLL */
 
 .scroll-hint{
     position:absolute;
+
     bottom:27px;
     left:50%;
+
     transform:translateX(-50%);
 
     color:#555861;
+
     font-size:8px;
+
     letter-spacing:3px;
 
     white-space:nowrap;
@@ -309,8 +342,13 @@ body::before{
 }
 
 @keyframes bounce{
-    0%,100%{transform:translate(-50%,0)}
-    50%{transform:translate(-50%,6px)}
+    0%,100%{
+        transform:translate(-50%,0);
+    }
+
+    50%{
+        transform:translate(-50%,6px);
+    }
 }
 
 /* PROJECT SECTION */
@@ -327,17 +365,25 @@ body::before{
 
 .section-label{
     color:var(--cyan);
+
     font-size:8px;
+
     font-weight:800;
+
     letter-spacing:3px;
+
     direction:ltr;
 }
 
 .section-title{
     margin-top:10px;
+
     font-size:clamp(32px,9vw,65px);
+
     line-height:1;
+
     font-weight:900;
+
     letter-spacing:-3px;
 }
 
@@ -347,10 +393,13 @@ body::before{
 
 .section-description{
     max-width:550px;
+
     margin:15px auto 0;
 
     color:#777a85;
+
     font-size:10px;
+
     line-height:1.8;
 }
 
@@ -358,7 +407,9 @@ body::before{
 
 .carousel-wrapper{
     position:relative;
+
     margin-top:45px;
+
     width:100%;
 }
 
@@ -366,12 +417,14 @@ body::before{
     width:100%;
 
     display:flex;
+
     gap:16px;
 
     overflow-x:auto;
     overflow-y:visible;
 
     scroll-snap-type:x mandatory;
+
     scroll-behavior:smooth;
 
     perspective:1100px;
@@ -384,6 +437,7 @@ body::before{
     direction:ltr;
 
     overscroll-behavior-x:contain;
+
     touch-action:pan-x;
 }
 
@@ -427,8 +481,6 @@ body::before{
     overflow:hidden;
 }
 
-/* CARD GLOW */
-
 .project-card::before{
     content:"";
 
@@ -455,6 +507,7 @@ body::before{
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:
@@ -484,7 +537,7 @@ body::before{
         0 0 45px rgba(0,234,255,.07);
 }
 
-/* PROJECT TOP */
+/* CARD TOP */
 
 .project-top{
     display:flex;
@@ -496,17 +549,21 @@ body::before{
 
 .project-number{
     color:#5d606a;
+
     font-size:9px;
+
     letter-spacing:2px;
 }
 
 .project-type{
     color:#71747e;
+
     font-size:8px;
+
     letter-spacing:1.5px;
 }
 
-/* PROJECT VISUAL */
+/* VISUAL */
 
 .project-visual{
     height:150px;
@@ -572,6 +629,7 @@ body::before{
 
 .project-symbol{
     position:relative;
+
     z-index:2;
 
     width:70px;
@@ -590,6 +648,7 @@ body::before{
     color:#fff;
 
     font-size:19px;
+
     font-weight:900;
 
     box-shadow:
@@ -602,12 +661,15 @@ body::before{
 
 .project-content{
     direction:rtl;
+
     text-align:right;
+
     margin-top:21px;
 }
 
 .project-content h3{
     font-size:21px;
+
     line-height:1.25;
 }
 
@@ -615,6 +677,7 @@ body::before{
     color:#858894;
 
     font-size:10px;
+
     line-height:1.8;
 
     margin-top:8px;
@@ -622,11 +685,13 @@ body::before{
     min-height:38px;
 }
 
-/* CARD BUTTON */
+/* PROJECT BUTTON */
 
 .project-bottom{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     margin-top:18px;
@@ -636,12 +701,15 @@ body::before{
 
 .project-tag{
     color:#666973;
+
     font-size:8px;
 }
 
 .open-project{
     display:inline-flex;
+
     align-items:center;
+
     gap:6px;
 
     padding:10px 13px;
@@ -653,6 +721,7 @@ body::before{
     color:#fff;
 
     font-size:9px;
+
     font-weight:800;
 
     background:rgba(255,255,255,.055);
@@ -664,6 +733,7 @@ body::before{
 
 .open-project:hover{
     background:rgba(0,234,255,.10);
+
     border-color:rgba(0,234,255,.3);
 }
 
@@ -671,6 +741,7 @@ body::before{
 
 .carousel-arrow{
     position:absolute;
+
     top:50%;
 
     width:42px;
@@ -693,7 +764,9 @@ body::before{
     font-size:16px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     transition:.25s;
@@ -701,6 +774,7 @@ body::before{
 
 .carousel-arrow:hover{
     background:rgba(0,234,255,.12);
+
     border-color:rgba(0,234,255,.3);
 }
 
@@ -734,6 +808,7 @@ body::before{
     color:#555861;
 
     font-size:8px;
+
     letter-spacing:2.5px;
 
     margin-bottom:9px;
@@ -741,7 +816,9 @@ body::before{
 
 .current-info h2{
     font-size:clamp(23px,6vw,34px);
+
     line-height:1.15;
+
     font-weight:900;
 }
 
@@ -749,6 +826,7 @@ body::before{
     color:#7d808b;
 
     font-size:10px;
+
     line-height:1.8;
 
     max-width:600px;
@@ -806,6 +884,7 @@ body::before{
     text-decoration:none;
 
     font-size:9px;
+
     font-weight:900;
 
     transition:.25s;
@@ -841,14 +920,13 @@ body::before{
 
 .dot.active{
     width:19px;
+
     border-radius:10px;
 
     background:var(--cyan);
 
     box-shadow:0 0 12px rgba(0,234,255,.45);
 }
-
-/* SWIPE TEXT */
 
 .swipe{
     text-align:center;
@@ -872,14 +950,19 @@ body::before{
 
 .contact-inner{
     max-width:800px;
+
     margin:auto;
+
     text-align:center;
 }
 
 .contact-title{
     font-size:clamp(32px,9vw,65px);
+
     line-height:1;
+
     font-weight:900;
+
     letter-spacing:-3px;
 }
 
@@ -889,9 +972,13 @@ body::before{
 
 .contact-subtitle{
     color:#777a85;
+
     font-size:10px;
+
     line-height:1.8;
+
     margin:14px auto 30px;
+
     max-width:520px;
 }
 
@@ -907,9 +994,10 @@ body::before{
 
 .social{
     text-decoration:none;
+
     color:#fff;
 
-    min-height:115px;
+    min-height:125px;
 
     padding:17px 12px;
 
@@ -920,45 +1008,108 @@ body::before{
     border-radius:18px;
 
     display:flex;
+
     flex-direction:column;
 
     align-items:center;
+
     justify-content:center;
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.social::before{
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:var(--social-color);
+
+    filter:blur(45px);
+
+    opacity:.08;
 
     transition:.3s;
 }
 
 .social:hover{
     transform:translateY(-5px);
+
     border-color:rgba(0,234,255,.25);
+
     background:rgba(255,255,255,.055);
 }
 
-.social-icon{
-    width:40px;
-    height:40px;
+.social:hover::before{
+    opacity:.18;
+}
 
-    border-radius:12px;
+/* SOCIAL SVG ICON */
+
+.social-icon{
+    position:relative;
+
+    z-index:2;
+
+    width:45px;
+    height:45px;
+
+    border-radius:14px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     background:rgba(255,255,255,.06);
 
-    font-size:15px;
-    font-weight:900;
+    border:1px solid rgba(255,255,255,.07);
 
     margin-bottom:10px;
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.social-icon svg{
+    width:21px;
+    height:21px;
+
+    fill:currentColor;
+}
+
+.social:hover .social-icon{
+    color:var(--social-color);
+
+    box-shadow:
+        0 0 22px rgba(0,234,255,.12);
 }
 
 .social strong{
+    position:relative;
+    z-index:2;
+
     font-size:9px;
 }
 
 .social small{
+    position:relative;
+    z-index:2;
+
     color:#5e616b;
+
     font-size:7px;
+
     margin-top:4px;
 
     direction:ltr;
@@ -982,7 +1133,11 @@ footer strong{
     color:#9a9ca5;
 }
 
-/* MOBILE */
+/* MOBILE NAV */
+
+.mobile-nav{
+    display:none;
+}
 
 @media(max-width:700px){
 
@@ -999,7 +1154,12 @@ footer strong{
     }
 
     .social{
-        min-height:105px;
+        min-height:110px;
+    }
+
+    .nursing-title{
+        font-size:9px;
+        letter-spacing:2px;
     }
 }
 
@@ -1030,11 +1190,7 @@ footer strong{
     }
 }
 
-/* BOTTOM MOBILE NAV */
-
-.mobile-nav{
-    display:none;
-}
+/* MOBILE NAV */
 
 @media(max-width:700px){
 
@@ -1082,28 +1238,20 @@ footer strong{
 
     .mobile-nav a:active{
         color:var(--cyan);
+
         background:rgba(0,234,255,.06);
     }
 
     .mobile-nav span{
         display:block;
+
         font-size:15px;
+
         margin-bottom:3px;
     }
 }
 
-/* REVEAL */
-
-.reveal{
-    opacity:0;
-    transform:translateY(20px);
-    transition:.7s ease;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:none;
-}
+/* REDUCED MOTION */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -1111,7 +1259,9 @@ footer strong{
     *::before,
     *::after{
         animation:none!important;
+
         transition:none!important;
+
         scroll-behavior:auto!important;
     }
 }
@@ -1126,13 +1276,21 @@ footer strong{
 <!-- LOADER -->
 
 <div id="loader">
-    <div class="loader-name">AYMAN</div>
-    <div class="loader-text">PERSONAL DIGITAL SPACE</div>
+
+    <div class="loader-name">
+        AYMAN
+    </div>
+
+    <div class="loader-text">
+        PERSONAL DIGITAL SPACE
+    </div>
 
     <div class="loader-progress">
         <span></span>
     </div>
+
 </div>
+
 
 <!-- TOP -->
 
@@ -1158,22 +1316,35 @@ footer strong{
     <div class="hero-inner">
 
         <div class="welcome">
+
             <i></i>
+
             WELCOME TO MY DIGITAL SPACE
+
         </div>
 
+
         <h1 class="hero-name">
-            <span class="first">AYMAN</span>
-            <span class="last">ABDELSANAD</span>
+
+            <span class="first">
+                AYMAN
+            </span>
+
+            <span class="last">
+                ABDELSANAD
+            </span>
+
         </h1>
 
-        <p class="hero-description">
-            أنا <strong>Ayman Abdelsanad</strong>،
-            طالب بكلية التمريض ومهتم بالتكنولوجيا
-            وتطوير المواقع وصناعة المشاريع الرقمية.
-        </p>
+
+        <!-- NEW ENGLISH TITLE -->
+
+        <div class="nursing-title">
+            COLLEGE OF NURSING STUDENT
+        </div>
 
     </div>
+
 
     <div class="scroll-hint">
         SCROLL TO EXPLORE ↓
@@ -1217,7 +1388,8 @@ footer strong{
 
         <div class="carousel" id="carousel">
 
-            <!-- PROJECT 1 -->
+
+            <!-- 01 -->
 
             <article
                 class="project-card"
@@ -1285,7 +1457,7 @@ footer strong{
             </article>
 
 
-            <!-- PROJECT 2 -->
+            <!-- 02 -->
 
             <article
                 class="project-card"
@@ -1353,7 +1525,7 @@ footer strong{
             </article>
 
 
-            <!-- PROJECT 3 -->
+            <!-- 03 -->
 
             <article
                 class="project-card"
@@ -1421,7 +1593,7 @@ footer strong{
             </article>
 
 
-            <!-- PROJECT 4 -->
+            <!-- 04 -->
 
             <article
                 class="project-card"
@@ -1489,7 +1661,7 @@ footer strong{
             </article>
 
 
-            <!-- PROJECT 5 -->
+            <!-- 05 -->
 
             <article
                 class="project-card"
@@ -1570,7 +1742,7 @@ footer strong{
     </div>
 
 
-    <!-- CURRENT PROJECT INFORMATION -->
+    <!-- CURRENT PROJECT INFO -->
 
     <div class="current-info" id="currentInfo">
 
@@ -1612,9 +1784,8 @@ footer strong{
     </div>
 
 
-    <!-- DOTS -->
-
     <div class="dots" id="dots"></div>
+
 
     <div class="swipe">
         SWIPE TO EXPLORE PROJECTS
@@ -1645,6 +1816,7 @@ footer strong{
 
         <div class="social-grid">
 
+
             <!-- FACEBOOK -->
 
             <a
@@ -1652,10 +1824,18 @@ footer strong{
                 href="https://www.facebook.com/share/1CLY9XDWRi/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style="--social-color:#1877f2;"
             >
 
                 <div class="social-icon">
-                    f
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.55.45-1 1-1z"/>
+                    </svg>
+
                 </div>
 
                 <strong>
@@ -1676,10 +1856,18 @@ footer strong{
                 href="https://wa.me/201280815067"
                 target="_blank"
                 rel="noopener noreferrer"
+                style="--social-color:#25D366;"
             >
 
                 <div class="social-icon">
-                    W
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.95L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.46-8.42zM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.37l-.36-.21-3.74.98 1-3.65-.23-.37a9.87 9.87 0 0 1-1.51-5.28C2.2 6.45 6.64 2 12.08 2a9.82 9.82 0 0 1 6.99 2.9 9.84 9.84 0 0 1 2.89 7c0 5.45-4.44 9.9-9.88 9.9zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                    </svg>
+
                 </div>
 
                 <strong>
@@ -1700,10 +1888,18 @@ footer strong{
                 href="https://instagram.com/ayman_3bdelsanad"
                 target="_blank"
                 rel="noopener noreferrer"
+                style="--social-color:#e1306c;"
             >
 
                 <div class="social-icon">
-                    ◎
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm8.65 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+                    </svg>
+
                 </div>
 
                 <strong>
@@ -1724,10 +1920,18 @@ footer strong{
                 href="https://t.me/ayman_abdelsanad"
                 target="_blank"
                 rel="noopener noreferrer"
+                style="--social-color:#229ED9;"
             >
 
                 <div class="social-icon">
-                    ✈
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M21.8 3.2 2.7 10.56c-1.3.52-1.29 1.24-.24 1.56l4.9 1.53 1.88 5.83c.23.64.12.9.78.9.51 0 .73-.23 1-.5l2.4-2.33 4.98 3.68c.92.51 1.58.25 1.81-.85l3.18-15c.34-1.34-.51-1.95-1.59-1.18zM8.1 13.3l10.98-6.93c.55-.34 1.05-.15.64.2l-8.96 8.1-.35 3.73-1.73-5.1-2.58-.8z"/>
+                    </svg>
+
                 </div>
 
                 <strong>
@@ -1785,27 +1989,22 @@ footer strong{
 
 <script>
 
-/* =========================
-   LOADER
-========================= */
+/* LOADER */
 
 window.addEventListener("load",function(){
 
     setTimeout(function(){
 
-        const loader =
-            document.getElementById("loader");
-
-        loader.classList.add("hide");
+        document
+            .getElementById("loader")
+            .classList.add("hide");
 
     },1000);
 
 });
 
 
-/* =========================
-   PROJECT CAROUSEL
-========================= */
+/* CAROUSEL */
 
 const carousel =
     document.getElementById("carousel");
@@ -1842,21 +2041,23 @@ const nextBtn =
 let currentIndex = 0;
 
 
-/* CREATE DOTS */
+/* DOTS */
 
 cards.forEach(function(card,index){
 
     const dot =
         document.createElement("div");
 
-    dot.className =
-        "dot";
+    dot.className = "dot";
 
-    dot.addEventListener("click",function(){
+    dot.addEventListener(
+        "click",
+        function(){
 
-        goToProject(index);
+            goToProject(index);
 
-    });
+        }
+    );
 
     dotsContainer.appendChild(dot);
 
@@ -1869,7 +2070,7 @@ const dots =
     );
 
 
-/* CENTER PADDING */
+/* PADDING */
 
 function setCarouselPadding(){
 
@@ -1893,7 +2094,7 @@ function setCarouselPadding(){
 }
 
 
-/* UPDATE CARD EFFECT */
+/* 3D EFFECT */
 
 function updateCarousel(){
 
@@ -1901,7 +2102,9 @@ function updateCarousel(){
         window.innerWidth / 2;
 
     let closestIndex = 0;
-    let closestDistance = Infinity;
+
+    let closestDistance =
+        Infinity;
 
 
     cards.forEach(function(card,index){
@@ -1972,37 +2175,15 @@ function updateCarousel(){
     });
 
 
-    setCurrentProject(closestIndex);
+    setCurrentProject(
+        closestIndex
+    );
 }
 
 
-/* SET CURRENT PROJECT */
+/* CURRENT PROJECT */
 
 function setCurrentProject(index){
-
-    if(index === currentIndex){
-
-        cards.forEach(function(card,i){
-
-            card.classList.toggle(
-                "center",
-                i === index
-            );
-
-        });
-
-        dots.forEach(function(dot,i){
-
-            dot.classList.toggle(
-                "active",
-                i === index
-            );
-
-        });
-
-        return;
-    }
-
 
     currentIndex = index;
 
@@ -2049,27 +2230,34 @@ function setCurrentProject(index){
 }
 
 
-/* GO TO PROJECT */
+/* GO TO */
 
 function goToProject(index){
 
     if(index < 0){
-        index = cards.length - 1;
+
+        index =
+            cards.length - 1;
+
     }
 
     if(index >= cards.length){
+
         index = 0;
+
     }
 
 
     const card =
         cards[index];
 
+
     const carouselRect =
         carousel.getBoundingClientRect();
 
     const cardRect =
         card.getBoundingClientRect();
+
 
     const scrollAmount =
         cardRect.left -
@@ -2081,8 +2269,11 @@ function goToProject(index){
 
 
     carousel.scrollBy({
+
         left:scrollAmount,
+
         behavior:"smooth"
+
     });
 
 }
@@ -2114,7 +2305,7 @@ nextBtn.addEventListener(
 );
 
 
-/* SCROLL EVENT */
+/* SCROLL */
 
 let scrollFrame = null;
 
@@ -2123,7 +2314,11 @@ carousel.addEventListener(
     function(){
 
         if(scrollFrame){
-            cancelAnimationFrame(scrollFrame);
+
+            cancelAnimationFrame(
+                scrollFrame
+            );
+
         }
 
         scrollFrame =
@@ -2152,21 +2347,20 @@ window.addEventListener(
 );
 
 
-/* INITIALIZE */
+/* INITIAL */
 
 setCarouselPadding();
 
 setTimeout(function(){
 
     goToProject(0);
+
     updateCarousel();
 
 },100);
 
 
-/* =========================
-   KEYBOARD
-========================= */
+/* KEYBOARD */
 
 document.addEventListener(
     "keydown",
@@ -2192,9 +2386,7 @@ document.addEventListener(
 );
 
 
-/* =========================
-   DYNAMIC PAGE TITLE
-========================= */
+/* TITLE */
 
 const titles = [
 
@@ -2219,9 +2411,7 @@ setInterval(function(){
 },3500);
 
 
-/* =========================
-   NAV SHADOW
-========================= */
+/* NAV SHADOW */
 
 window.addEventListener(
     "scroll",
