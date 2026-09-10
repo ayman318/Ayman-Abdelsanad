@@ -1,0 +1,1216 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050508">
+<meta name="description" content="Ayman Abdelsanad — Nursing Student, Developer & Creator">
+<title>AYMAN ABD ELSANAD</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Arial,sans-serif;
+    background:#050508;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 15% 20%,rgba(0,225,255,.10),transparent 28%),
+        radial-gradient(circle at 85% 35%,rgba(130,70,255,.10),transparent 30%),
+        radial-gradient(circle at 50% 90%,rgba(0,255,180,.06),transparent 25%);
+    z-index:-3;
+}
+
+.grid{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    opacity:.16;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:45px 45px;
+    mask-image:linear-gradient(to bottom,black,transparent);
+}
+
+.orb{
+    position:fixed;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    filter:blur(70px);
+    opacity:.18;
+    pointer-events:none;
+    z-index:-1;
+    animation:floatOrb 8s ease-in-out infinite alternate;
+}
+
+.orb.one{
+    background:#00eaff;
+    top:12%;
+    left:-80px;
+}
+
+.orb.two{
+    background:#7b2cff;
+    top:55%;
+    right:-90px;
+    animation-delay:2s;
+}
+
+@keyframes floatOrb{
+    from{transform:translateY(-20px)}
+    to{transform:translateY(50px)}
+}
+
+/* =========================
+   LOADING
+========================= */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#030305;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    transition:opacity .7s,visibility .7s;
+}
+
+#loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-logo{
+    font-size:clamp(25px,8vw,55px);
+    font-weight:900;
+    letter-spacing:4px;
+    text-align:center;
+    background:linear-gradient(90deg,#fff,#00eaff,#8c5cff,#fff);
+    background-size:250%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:shine 2s linear infinite;
+}
+
+.loader-status{
+    margin-top:18px;
+    color:#777;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.loader-line{
+    width:150px;
+    height:2px;
+    background:#17171d;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.loader-line span{
+    display:block;
+    width:45%;
+    height:100%;
+    background:#00eaff;
+    box-shadow:0 0 15px #00eaff;
+    animation:load 1.4s infinite;
+}
+
+@keyframes load{
+    from{transform:translateX(-100%)}
+    to{transform:translateX(300%)}
+}
+
+@keyframes shine{
+    to{background-position:250%}
+}
+
+/* =========================
+   NAV
+========================= */
+
+.top-nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:calc(100% - 30px);
+    max-width:950px;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 15px;
+    border:1px solid rgba(255,255,255,.09);
+    background:rgba(8,8,12,.62);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+}
+
+.brand{
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.brand span{
+    color:#00eaff;
+}
+
+.nav-links{
+    display:flex;
+    gap:8px;
+}
+
+.nav-links a{
+    color:#999;
+    text-decoration:none;
+    font-size:11px;
+    padding:8px 11px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+    background:rgba(255,255,255,.07);
+}
+
+@media(max-width:650px){
+    .top-nav{
+        top:10px;
+        padding:10px 12px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 60px;
+    position:relative;
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+}
+
+.status-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 14px;
+    border:1px solid rgba(0,234,255,.18);
+    background:rgba(0,234,255,.05);
+    border-radius:999px;
+    color:#9eefff;
+    font-size:10px;
+    letter-spacing:1.5px;
+    margin-bottom:25px;
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+    background:#00ffae;
+    border-radius:50%;
+    box-shadow:0 0 12px #00ffae;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{opacity:.35;transform:scale(.65)}
+}
+
+.hero h1{
+    font-size:clamp(45px,13vw,125px);
+    line-height:.85;
+    font-weight:900;
+    letter-spacing:-5px;
+    margin-bottom:24px;
+    position:relative;
+}
+
+.hero h1 .first{
+    display:block;
+    background:linear-gradient(100deg,#fff 10%,#c9faff 40%,#00eaff 65%,#8c5cff 95%);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h1 .last{
+    display:block;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.55);
+}
+
+.hero-sub{
+    color:#a0a0aa;
+    font-size:clamp(13px,3.5vw,18px);
+    line-height:1.7;
+    max-width:620px;
+    margin:auto;
+}
+
+.hero-sub b{
+    color:#fff;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    border:0;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 19px;
+    border-radius:14px;
+    font-size:12px;
+    font-weight:700;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#00eaff,#6577ff);
+    color:#020205;
+    box-shadow:0 0 30px rgba(0,234,255,.15);
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.10);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    width:100%;
+    max-width:1050px;
+    margin:auto;
+    padding:90px 18px;
+}
+
+.section-label{
+    color:#00eaff;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:clamp(28px,7vw,55px);
+    line-height:1;
+    font-weight:900;
+    margin-bottom:35px;
+}
+
+.section-title span{
+    color:#666;
+}
+
+/* =========================
+   ID CARD
+========================= */
+
+.identity{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:15px;
+}
+
+.card{
+    background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:25px;
+    padding:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:#00eaff;
+    filter:blur(80px);
+    opacity:.08;
+    top:-50px;
+    right:-50px;
+}
+
+.id-card{
+    min-height:280px;
+}
+
+.id-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.id-chip{
+    width:35px;
+    height:25px;
+    border-radius:6px;
+    border:1px solid #777;
+    background:linear-gradient(135deg,#aaa,#333);
+}
+
+.id-code{
+    color:#555;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.id-name{
+    font-size:clamp(27px,7vw,48px);
+    font-weight:900;
+    line-height:.95;
+}
+
+.id-name span{
+    color:#00eaff;
+}
+
+.id-role{
+    margin-top:12px;
+    color:#888;
+    font-size:12px;
+}
+
+.id-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-top:40px;
+}
+
+.id-field{
+    color:#666;
+    font-size:8px;
+    letter-spacing:2px;
+}
+
+.id-value{
+    color:#ddd;
+    font-size:11px;
+    margin-top:5px;
+}
+
+.qr{
+    width:50px;
+    height:50px;
+    border:4px dotted #777;
+    opacity:.5;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.stat{
+    min-height:130px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.stat-number{
+    font-size:35px;
+    font-weight:900;
+}
+
+.stat-number span{
+    color:#00eaff;
+}
+
+.stat-label{
+    color:#777;
+    font-size:10px;
+    margin-top:6px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.project{
+    min-height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:.4s;
+}
+
+.project:hover{
+    transform:translateY(-7px);
+    border-color:rgba(0,234,255,.3);
+}
+
+.project-number{
+    color:#555;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.project-icon{
+    width:55px;
+    height:55px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.project h3{
+    font-size:21px;
+    margin-top:20px;
+}
+
+.project p{
+    color:#777;
+    font-size:11px;
+    line-height:1.7;
+    margin-top:8px;
+}
+
+.project-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:25px;
+}
+
+.project-link{
+    text-decoration:none;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    padding:10px 13px;
+    background:rgba(0,234,255,.08);
+    border:1px solid rgba(0,234,255,.15);
+    border-radius:10px;
+}
+
+.trial{
+    color:#ffcc66;
+    font-size:9px;
+    padding:6px 8px;
+    border:1px solid rgba(255,204,102,.2);
+    border-radius:7px;
+}
+
+/* =========================
+   CONNECT
+========================= */
+
+.socials{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.social{
+    text-decoration:none;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:17px;
+    border-radius:17px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    transition:.3s;
+}
+
+.social:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,.07);
+}
+
+.social-icon{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:rgba(255,255,255,.06);
+    font-weight:900;
+}
+
+.social-text strong{
+    display:block;
+    font-size:11px;
+}
+
+.social-text small{
+    display:block;
+    color:#666;
+    font-size:9px;
+    margin-top:4px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:50px 20px 110px;
+    color:#555;
+    font-size:10px;
+}
+
+footer strong{
+    color:#aaa;
+}
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+.mobile-nav{
+    display:none;
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:70px 15px;
+    }
+
+    .hero{
+        padding-top:100px;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .identity{
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .project{
+        min-height:260px;
+    }
+
+    .socials{
+        grid-template-columns:1fr;
+    }
+
+    .mobile-nav{
+        display:flex;
+        position:fixed;
+        z-index:200;
+        bottom:12px;
+        left:12px;
+        right:12px;
+        padding:9px;
+        background:rgba(8,8,12,.8);
+        backdrop-filter:blur(20px);
+        border:1px solid rgba(255,255,255,.1);
+        border-radius:20px;
+        justify-content:space-around;
+        box-shadow:0 10px 40px rgba(0,0,0,.4);
+    }
+
+    .mobile-nav a{
+        color:#777;
+        text-decoration:none;
+        font-size:9px;
+        padding:8px 12px;
+        border-radius:12px;
+        text-align:center;
+    }
+
+    .mobile-nav a span{
+        display:block;
+        font-size:17px;
+        margin-bottom:3px;
+    }
+
+    .mobile-nav a:active{
+        color:#00eaff;
+        background:rgba(0,234,255,.06);
+    }
+
+    footer{
+        padding-bottom:110px;
+    }
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+@media(prefers-reduced-motion:reduce){
+    *,
+    *::before,
+    *::after{
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+    }
+}
+</style></head><body><div id="loader">
+    <div class="loader-logo">AYMAN</div>
+    <div class="loader-status">DIGITAL IDENTITY / INITIALIZING</div>
+    <div class="loader-line"><span></span></div>
+</div><div class="grid"></div>
+<div class="orb one"></div>
+<div class="orb two"></div><header class="top-nav">
+    <div class="brand">A<span>.</span>A</div><nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#connect">Connect</a>
+</nav>
+
+<div style="font-size:9px;color:#555;letter-spacing:1px;">
+    ONLINE
+</div>
+
+</header><main><section class="hero" id="home">
+    <div class="hero-content">    <div class="status-pill">
+        <span class="status-dot"></span>
+        DIGITAL IDENTITY — ACTIVE
+    </div>
+
+    <h1>
+        <span class="first">AYMAN</span>
+        <span class="last">ABDELSANAD</span>
+    </h1>
+
+    <p class="hero-sub">
+        <b>Nursing Student</b> building digital experiences,
+        educational platforms and creative web projects.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+            Explore Projects ↗
+        </a>
+
+        <a href="#connect" class="btn btn-secondary">
+            Connect With Me
+        </a>
+    </div>
+
+</div>
+
+</section><section id="about" class="reveal"><div class="section-label">01 / IDENTITY</div>
+
+<div class="section-title">
+    WHO AM I<span>?</span>
+</div>
+
+<div class="identity">
+
+    <div class="card id-card">
+
+        <div class="id-top">
+            <div class="id-chip"></div>
+            <div class="id-code">AA / 2005 / EG</div>
+        </div>
+
+        <div class="id-name">
+            AYMAN<br>
+            <span>ABDELSANAD</span>
+        </div>
+
+        <div class="id-role">
+            Nursing Student • Developer • Creator
+        </div>
+
+        <div class="id-bottom">
+            <div>
+                <div class="id-field">FIELD</div>
+                <div class="id-value">NURSING</div>
+            </div>
+
+            <div>
+                <div class="id-field">STATUS</div>
+                <div class="id-value">ACTIVE</div>
+            </div>
+
+            <div class="qr"></div>
+        </div>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card stat">
+            <div class="stat-number">05<span>+</span></div>
+            <div class="stat-label">PROJECTS</div>
+        </div>
+
+        <div class="card stat">
+            <div class="stat-number">04<span>+</span></div>
+            <div class="stat-label">EDUCATIONAL IDEAS</div>
+        </div>
+
+        <div class="card stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">IDEAS TO BUILD</div>
+        </div>
+
+        <div class="card stat">
+            <div class="stat-number">24<span>/7</span></div>
+            <div class="stat-label">CREATIVE MODE</div>
+        </div>
+
+    </div>
+
+</div>
+
+</section><section id="projects" class="reveal"><div class="section-label">02 / PROJECTS</div>
+
+<div class="section-title">
+    THINGS I <span>BUILT.</span>
+</div>
+
+<div class="projects">
+
+    <article class="card project">
+
+        <div>
+            <div class="project-number">PROJECT / 01</div>
+
+            <div class="project-icon">✦</div>
+
+            <h3>Wissam Perfumes</h3>
+
+            <p>
+                Modern perfume store experience with products,
+                categories and a complete shopping interface.
+            </p>
+        </div>
+
+        <div class="project-bottom">
+            <a
+                class="project-link"
+                href="https://alwissam-perfume.vercel.app/"
+                target="_blank"
+                rel="noopener"
+            >
+                OPEN PROJECT ↗
+            </a>
+        </div>
+
+    </article>
+
+
+    <article class="card project">
+
+        <div>
+            <div class="project-number">PROJECT / 02</div>
+
+            <div class="project-icon">⌘</div>
+
+            <h3>Nursing in Lotus University</h3>
+
+            <p>
+                Educational platform designed for
+                Lotus University Nursing students.
+            </p>
+        </div>
+
+        <div class="project-bottom">
+            <a
+                class="project-link"
+                href="https://louts-iota.vercel.app/"
+                target="_blank"
+                rel="noopener"
+            >
+                OPEN PROJECT ↗
+            </a>
+        </div>
+
+    </article>
+
+
+    <article class="card project">
+
+        <div>
+            <div class="project-number">PROJECT / 03</div>
+
+            <div class="project-icon">AI</div>
+
+            <h3>Nursing AI</h3>
+
+            <p>
+                AI-focused nursing project designed
+                to explore smarter educational experiences.
+            </p>
+        </div>
+
+        <div class="project-bottom">
+            <span class="trial">UNDER TRIAL</span>
+
+            <a
+                class="project-link"
+                href="https://nirsing-ai.vercel.app/"
+                target="_blank"
+                rel="noopener"
+            >
+                OPEN ↗
+            </a>
+        </div>
+
+    </article>
+
+
+    <article class="card project">
+
+        <div>
+            <div class="project-number">PROJECT / 04</div>
+
+            <div class="project-icon">26</div>
+
+            <h3>Thanaweya Amma Results 2026</h3>
+
+            <p>
+                A simple and fast interface for accessing
+                2026 Egyptian secondary school results.
+            </p>
+        </div>
+
+        <div class="project-bottom">
+            <a
+                class="project-link"
+                href="https://ntega-sigma.vercel.app/"
+                target="_blank"
+                rel="noopener"
+            >
+                OPEN PROJECT ↗
+            </a>
+        </div>
+
+    </article>
+
+
+    <article class="card project">
+
+        <div>
+            <div class="project-number">PROJECT / 05</div>
+
+            <div class="project-icon">PS</div>
+
+            <h3>PS4 / PS5 Test</h3>
+
+            <p>
+                Interactive controller testing interface
+                for PlayStation 4 and PlayStation 5.
+            </p>
+        </div>
+
+        <div class="project-bottom">
+            <a
+                class="project-link"
+                href="https://ps7.vercel.app/"
+                target="_blank"
+                rel="noopener"
+            >
+                OPEN PROJECT ↗
+            </a>
+        </div>
+
+    </article>
+
+</div>
+
+</section><section id="connect" class="reveal"><div class="section-label">03 / CONNECTION</div>
+
+<div class="section-title">
+    FIND <span>ME.</span>
+</div>
+
+<div class="socials">
+
+    <a
+        class="social"
+        href="https://www.facebook.com/share/1CLY9XDWRi/"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="social-icon">f</div>
+
+        <div class="social-text">
+            <strong>Facebook</strong>
+            <small>Connect on Facebook ↗</small>
+        </div>
+    </a>
+
+
+    <a
+        class="social"
+        href="https://wa.me/201280815067"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="social-icon">W</div>
+
+        <div class="social-text">
+            <strong>WhatsApp</strong>
+            <small>01280815067</small>
+        </div>
+    </a>
+
+
+    <a
+        class="social"
+        href="https://instagram.com/ayman_3bdelsanad"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="social-icon">◎</div>
+
+        <div class="social-text">
+            <strong>Instagram</strong>
+            <small>@ayman_3bdelsanad</small>
+        </div>
+    </a>
+
+
+    <a
+        class="social"
+        href="https://t.me/ayman_abdelsanad"
+        target="_blank"
+        rel="noopener"
+    >
+        <div class="social-icon">✈</div>
+
+        <div class="social-text">
+            <strong>Telegram</strong>
+            <small>@ayman_abdelsanad</small>
+        </div>
+    </a>
+
+</div>
+
+</section></main><footer>
+    <div>
+        Designed & Built by <strong>AYMAN ABDELSANAD</strong>
+    </div><div style="margin-top:8px;">
+    © 2026 — ALL RIGHTS RESERVED
+</div>
+
+</footer><nav class="mobile-nav"><a href="#home">
+    <span>⌂</span>
+    HOME
+</a>
+
+<a href="#about">
+    <span>◉</span>
+    ABOUT
+</a>
+
+<a href="#projects">
+    <span>✦</span>
+    PROJECTS
+</a>
+
+<a href="#connect">
+    <span>↗</span>
+    CONTACT
+</a>
+
+</nav><script>
+
+/* =========================
+   LOADER
+========================= */
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById("loader").classList.add("hide");
+    }, 1200);
+});
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+        });
+    },
+    {
+        threshold:.12
+    }
+);
+
+document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+});
+
+
+/* =========================
+   MOBILE TOUCH EFFECT
+========================= */
+
+document.addEventListener("touchmove", e => {
+
+    const touch = e.touches[0];
+
+    document.documentElement.style.setProperty(
+        "--touch-x",
+        touch.clientX + "px"
+    );
+
+    document.documentElement.style.setProperty(
+        "--touch-y",
+        touch.clientY + "px"
+    );
+
+},{passive:true});
+
+
+/* =========================
+   PROJECT CARD TILT
+========================= */
+
+document.querySelectorAll(".project").forEach(card => {
+
+    card.addEventListener("pointermove", e => {
+
+        if(window.innerWidth < 700) return;
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateX =
+            ((y / rect.height) - .5) * -5;
+
+        const rotateY =
+            ((x / rect.width) - .5) * 5;
+
+        card.style.transform =
+            `perspective(700px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-5px)`;
+    });
+
+    card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+    });
+
+});
+
+
+/* =========================
+   DYNAMIC PAGE TITLE
+========================= */
+
+let titleIndex = 0;
+
+const titles = [
+    "AYMAN ABDELSANAD",
+    "NURSING × TECHNOLOGY",
+    "AYMAN — DIGITAL IDENTITY"
+];
+
+setInterval(() => {
+
+    titleIndex =
+        (titleIndex + 1) % titles.length;
+
+    document.title = titles[titleIndex];
+
+},4000);
+
+</script></body>
+</html>
